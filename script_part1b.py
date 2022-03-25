@@ -4,12 +4,12 @@ import numpy as np
 
 #Anna
 dis, spe = rd.load_route('speed_anna.npz')
-x = np.linspace(min(dis), max(dis), 60)
+x = np.linspace(min(dis), max(dis), 60000)
 v = rd.velocity(x,'speed_anna')
 
 #Elsa
 dis2, spe2 = rd.load_route('speed_elsa.npz')
-x2 = np.linspace(min(dis2), max(dis2), 60)
+x2 = np.linspace(min(dis2), max(dis2), 60000)
 v2 = rd.velocity(x2,'speed_elsa')
 
 ###Plot###
@@ -28,6 +28,7 @@ plt.title('Speed over distance')
 plt.ylabel('Speed [km/h]')
 plt.xlabel('Distance [km]')
 # plt.axis([10, 20, 70, 120])
+# plt.axis([10, 10.5, 95, 100])
 plt.grid()
 plt.legend(loc = (0.13, 0.05))
 plt.show()
