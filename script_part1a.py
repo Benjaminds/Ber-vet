@@ -3,7 +3,6 @@
 import numpy as np
 import roadster  as rd
 import matplotlib.pyplot as plt
-import test_roadster as tst
 
 speed_kmph = np.linspace(1., 200., 1000)
 consumption_Whpkm = rd.consumption(speed_kmph)
@@ -15,7 +14,3 @@ plt.xlabel('Speed [km/h]')
 plt.ylabel('Consumption [Wh/km]')
 plt.grid()
 plt.show()
-
-print(tst.test_part1a_A())
-print(tst.test_part1a_B())
-print(tst.test_part1a_C())
