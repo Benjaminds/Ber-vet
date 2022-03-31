@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-#Wed Mar 16 15:04:11 2022 +0100, 601cd27
 import numpy as np
 import roadster  as rd
 import matplotlib.pyplot as plt
