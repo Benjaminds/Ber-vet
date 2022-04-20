@@ -148,15 +148,15 @@ def distance(T, route):
         assert 100 > n, 'Runtime error'
         n += 1
         
-        time_2h = time_to_destination(dis, route, 15000)
-        time_h = time_to_destination(dis, route, 30000) 
+        time_2h = time_to_destination(dis, route, 250000)
+        time_h = time_to_destination(dis, route, 500000) 
         dt = (time_h - time_2h) / 3
         
         ddis = - (time_h - T) * velocity(dis, route)
         dis += ddis
         error = abs(ddis) + abs(dt)
     
-    return dis, n
+    return dis
 
 ### PART 3B ###
 def reach(C, route):
@@ -186,8 +186,8 @@ def reach(C, route):
         assert 100 > n, 'Runtime error'
         n += 1
         
-        totcon_2h = total_consumption(dis, route, 15000)
-        totcon_h = total_consumption(dis, route, 30000) 
+        totcon_2h = total_consumption(dis, route, 250000)
+        totcon_h = total_consumption(dis, route, 500000) 
         dtotcon = (totcon_h - totcon_2h) / 3
          
         ddis = - (totcon_h - C) / consumption(velocity(dis, route))
